@@ -1,5 +1,7 @@
 # Interactive Feature Branch Walkthrough
 
+## I'll need to add you as a collaborator on this repository in order for you to push to it
+
 ## Step 1 - Clone the repository locally
 Navigate to a directory on your computer where you'd like to put this repository and execute the following command
 ```
