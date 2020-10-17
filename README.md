@@ -88,4 +88,18 @@ Now we want to merge your changes into the master branch so that they actually g
 
 GitHub calls a request to merge into master a "pull request" while Gitlab calls them "merge requests". The terms are essentially interchangeable and just depend on which platform you are using. (`git pull` is a command that just combines together `git fetch` + `git merge` to get remote changes and merge them).
 
-In order to open a pull request on GitHub, you should first switch to your branch, 
+In order to open a pull request to merge into master on GitHub, you can go to the pull request tab, then click "New pull request" 
+![Making a pull request](readme_images/New_PR.png)
+Then, select 
+
+base: master and compare: \<your branch name\>
+![Creating pull request with correct branches](readme_images/PR_Branches.png)
+and click "Create pull request."
+
+This will bring you to a page where you'll be prompted to write out a quick description of the purpose of your pull request before finally creating it. Generally, you will then have that pull request reviewed by a more senior engineer before it can be approved and finally merged into master.
+
+
+## Conclusion
+The process you just went through is probably the most common series of steps that you will do while working on production software and adding features. You'll go through this process over and over again as you create new feature branches and add commits to those branches before finally merged back into master. 
+
+Also, please note that git is an extremely powerful tool with tons and tons of features we haven't really touched on at all. (e.g. merging vs. rebasing, interactive rebasing, dealing with merge conflicts, refs, etc.). However, the majority of the work you do with git will likely involve this standard feature branch workflow.  
