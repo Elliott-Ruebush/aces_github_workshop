@@ -80,10 +80,12 @@ git push
 to push additional commits.
 
 ## Step 4 - Merge your branch into master
-At this point, your feature branch should show up in the list of branches of the GitHub repository. You can click the branches dropdown in the left hand corner of the repository and search for your branch. 
+At this point, your feature branch should show up in the list of branches of the GitHub repository. You can click the branches dropdown in the left hand corner of the repository and search for your branch.
 
 ![Github branches list](readme_images/Branches_Screenshot.png)
 
+Now we want to merge your changes into the master branch so that they actually go into "production" and are a part of the official version of whatever product we're working on. 
+
 GitHub calls a request to merge into master a "pull request" while Gitlab calls them "merge requests". The terms are essentially interchangeable and just depend on which platform you are using. (`git pull` is a command that just combines together `git fetch` + `git merge` to get remote changes and merge them).
 
-
+In order to open a pull request on GitHub, you should first switch to your branch, 
