@@ -17,7 +17,7 @@ git checkout -b <super-special-branch-name>
 ```
 This command will create a new branch that "branches" off of the branch you are currently in (master). Essentially, you're splitting the graph structure to create a new series of commits that will have a parent pointing back to the current commit in master. However, the master branch will continue to move forward with commits independently of the new branch you just made. This allows you to work on making changes to your specific feature branch while other people work on their own features and then subsequently merge them into master. You can then merge your feature branch back into master once you've successfully finished your feature. We'll demonstrate this process with the remainder of this tutorial.
 
-[Simple branch image](readme_images/Git-Branches-1.png)
+![Simple branch image](readme_images/Git-Branches-1.png)
 
 ## Step 3 - Make your changes and push them
 First off, you'll need to make some changes to commit. In this walkthrough, I would prefer if everyone creates new directories/files for themselves because otherwise we might run into merge conflicts if multiple people edit the same file or create files with the same name. 
@@ -59,11 +59,31 @@ git commit -m "helpful commit message here..."
 ```
 to create a commit and an associated commit message that describes what changes were just committed. 
 
-Congrats! You've just made your commit 
+Congrats! You've just made a commit. You can check the commit history and see your commit using the command
+```
+git log
+```
 
 ### Step 3.2 - Push changes to a remote branch
+Okay, you've finished your changes and have made a local commit, but now we need to get those changes pushed up to the remote GitHub repository. 
+
+The first time you push changes for a new branch, you'll need to tell git to establish a remote version of your feature branch. In order to do this we use the following command
+```
+git push --set-upstream <your-branch-name>
+```
+You can also type -u instead of --set-upstream. This command tells git to create a remote version of your branch with the same name and then associates that remote version with your local version so that you can push your commits to the remote version.
+
+After this initial upstream setup, you'll simply need to run
+```
+git push
+```
+to push additional commits.
 
 ## Step 4 - Merge your branch into master
+At this point, your feature branch should show up in the list of branches of the GitHub repository. You can click the branches dropdown in the left hand corner of the repository and search for your branch. 
+
+![Github branches list](readme_images/Branches_Screenshot.png)
+
 GitHub calls a request to merge into master a "pull request" while Gitlab calls them "merge requests". The terms are essentially interchangeable and just depend on which platform you are using. (`git pull` is a command that just combines together `git fetch` + `git merge` to get remote changes and merge them).
 
 
