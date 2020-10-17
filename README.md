@@ -69,7 +69,7 @@ Okay, you've finished your changes and have made a local commit, but now we need
 
 The first time you push changes for a new branch, you'll need to tell git to establish a remote version of your feature branch. In order to do this we use the following command
 ```
-git push --set-upstream <your-branch-name>
+git push --set-upstream origin <your-branch-name>
 ```
 You can also type -u instead of --set-upstream. This command tells git to create a remote version of your branch with the same name and then associates that remote version with your local version so that you can push your commits to the remote version.
 
